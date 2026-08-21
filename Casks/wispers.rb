@@ -5,14 +5,14 @@ cask "wispers" do
   sha256 arm:   "fa56ad2472a8d750fd5bc78a73535b609f94b3e03d38b5aadb8e922422715751",
          intel: "0e63ee510767653124b4776f0edd06f7f69bf11861da35ce396820d5735ce1c0"
 
-  url "https://whisperz.space/downloads/Wispers-#{version}#{arch}-mac.zip"
+  url "https://github.com/LucasUltremare/homebrew-wispers/releases/download/v#{version}/Wispers-#{version}#{arch}-mac.zip"
   name "Wispers"
   desc "Salas privadas pra você e seus amigos — tela com áudio, voz e chat"
   homepage "https://whisperz.space/"
 
   livecheck do
-    url "https://whisperz.space/downloads/latest-mac.yml"
-    regex(/^version:\s*v?(\d+(?:\.\d+)+)$/i)
+    url :url
+    strategy :github_latest
   end
 
   depends_on macos: :ventura
