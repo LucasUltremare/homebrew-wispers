@@ -1,9 +1,9 @@
 cask "wispers" do
   arch arm: "-arm64", intel: ""
 
-  version "0.1.0"
-  sha256 arm:   "fa56ad2472a8d750fd5bc78a73535b609f94b3e03d38b5aadb8e922422715751",
-         intel: "0e63ee510767653124b4776f0edd06f7f69bf11861da35ce396820d5735ce1c0"
+  version "0.2.0"
+  sha256 arm:   "32e67ff5f00dba83eceed1d11ee9dcdd3b790c11ee994668a3217c68fb09feff",
+         intel: "a7202017aca85e12a6b0de0695f7eda25b261d1c1303e450509a0244482b6855"
 
   url "https://github.com/LucasUltremare/homebrew-wispers/releases/download/v#{version}/Wispers-#{version}#{arch}-mac.zip"
   name "Wispers"
