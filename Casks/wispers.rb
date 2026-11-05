@@ -1,9 +1,9 @@
 cask "wispers" do
   arch arm: "-arm64", intel: ""
 
-  version "0.2.0"
-  sha256 arm:   "32e67ff5f00dba83eceed1d11ee9dcdd3b790c11ee994668a3217c68fb09feff",
-         intel: "a7202017aca85e12a6b0de0695f7eda25b261d1c1303e450509a0244482b6855"
+  version "0.3.0"
+  sha256 arm:   "8c7e03c541ed7553a34045a3b964fef3cb543a72d1280b1e3e750293fe2da2f6",
+         intel: "80d14b6fdede1abceaf8dbc297c2b6568eca99d083120da8a5ee1e5eef165aba"
 
   url "https://github.com/LucasUltremare/homebrew-wispers/releases/download/v#{version}/Wispers-#{version}#{arch}-mac.zip"
   name "Wispers"
@@ -15,6 +15,10 @@ cask "wispers" do
     strategy :github_latest
   end
 
+  # O próprio app se atualiza (baixa o zip da Release, confere o sha512 e
+  # troca o .app ao abrir/fechar). Sem isto o `brew upgrade` brigaria com ele
+  # reinstalando por cima; com isto o brew só mexe com --greedy.
+  auto_updates true
   depends_on macos: :ventura
 
   app "Wispers.app"
