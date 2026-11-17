@@ -1,11 +1,8 @@
 cask "wispers" do
-  arch arm: "-arm64", intel: ""
+  version "0.3.2"
+  sha256 "c221a96f3a7fc5a739baaa433db71041afacc4e3f7f7fcdedca95d8b24579db7"
 
-  version "0.3.1"
-  sha256 arm:   "fc529c08f1a16412e0357f295e00aa74c0bcd413da1ddf508975bb96c551e7d8",
-         intel: "15a9d853b685907572cbf450ecd5d3d9af5bdf61cb366c046a48ca76ef43e66f"
-
-  url "https://github.com/LucasUltremare/homebrew-wispers/releases/download/v#{version}/Wispers-#{version}#{arch}-mac.zip"
+  url "https://github.com/LucasUltremare/homebrew-wispers/releases/download/v#{version}/Wispers-#{version}-arm64-mac.zip"
   name "Wispers"
   desc "Salas privadas pra você e seus amigos — tela com áudio, voz e chat"
   homepage "https://whisperz.space/"
@@ -19,6 +16,7 @@ cask "wispers" do
   # troca o .app ao abrir/fechar). Sem isto o `brew upgrade` brigaria com ele
   # reinstalando por cima; com isto o brew só mexe com --greedy.
   auto_updates true
+  depends_on arch: :arm64
   depends_on macos: :ventura
 
   app "Wispers.app"
