@@ -1,6 +1,6 @@
 cask "wispers" do
-  version "0.3.2"
-  sha256 "c221a96f3a7fc5a739baaa433db71041afacc4e3f7f7fcdedca95d8b24579db7"
+  version "0.4.0"
+  sha256 "2a16f050fe69531001737880019bd695f1b68ef79d1d1318e9c4d69c934180ca"
 
   url "https://github.com/LucasUltremare/homebrew-wispers/releases/download/v#{version}/Wispers-#{version}-arm64-mac.zip"
   name "Wispers"
